@@ -1,0 +1,8 @@
+body {
+    background-color: rgb(41, 49, 54);
+}
+h1 {
+    text-align: center;
+    color: white;
+    font:  small-caps 4em 'Lucida Console', sans-serif;
+}
