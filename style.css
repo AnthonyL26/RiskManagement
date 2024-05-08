@@ -5,4 +5,112 @@ h1 {
     text-align: center;
     color: white;
     font:  small-caps 4em 'Lucida Console', sans-serif;
+    padding: 5px;
+    margin: 5px;
+    position: relative;
+}
+#head {
+    margin: auto;
+    text-align: center;
+    width: 50%;
+    border-bottom-style: groove;
+    border-color: white;
+}
+div {
+    border-style: solid;
+    border-color: aqua;
+    
+}
+
+#company {
+    background-color: rgba(88, 255, 124, 0.644);
+    margin-top: 50px;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-radius: 50%;
+    border: 0;
+    padding:10px
+    
+}
+
+#name {
+    margin-top: 20px;
+    width: 55%;
+    height: 110px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: white;
+    font:  small-caps 100px 'Lucida Console', sans-serif;
+}
+
+#moneydiv {
+    margin-top: 20px;
+    width: 55%;
+    height: 110px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: white;
+    font:  small-caps 100px 'Lucida Console', sans-serif;
+    padding: 5px;
+    color: rgb(0, 255, 0);
+}
+#moneytext {
+    
+}
+a:focus{
+    box-shadow: 0 0 2px blue;
+    background-color: grey;
+    font:  small-caps 100px 'Lucida Console', sans-serif;
+}
+img {
+    z-index: 1;
+    width: 55%;
+}
+#highlight {
+    border-radius: 50%;
+    z-index: -1;
+}
+#shop {
+    background: rgb(0, 102, 17);
+    margin-top: 20px;
+    width: 20%;
+    margin-left: auto;
+    margin-top: 100%;
+    text-align: center;
+    color: white;
+    font:  small-caps 100px 'Lucida Console', sans-serif;
+    position:fixed; 
+    right:0;
+    bottom:0;
+}
+
+#shop:hover {
+    background-color: rgb(0, 206, 34);
+    cursor: pointer;
+}
+#dayCounter {
+    margin-top: 0px;
+    width: 20%;
+    margin-left: auto;
+    margin-top: 100%;
+    text-align: center;
+    color: white;
+    font:  small-caps 100px 'Lucida Console', sans-serif;
+    position:fixed; 
+    right:0;
+    top:0;
+}
+#event {
+    color:white;
+    position: absolute;
+    left: 0;
+    top: 200px;
+    height: 745px;
+    width: 350px;
+    inline-size: 350px;
+    overflow-wrap: break-word;
 }
