@@ -6,23 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RiskManagement</title>
     <link rel="stylesheet" href="style.css">
+    <script src ='script.js'></script>
 </head>
-<body>
+<body onload ="onLoad()">
     <div id="head">
-        <h1>RISK MANAGEMENT</h1>
+        <h1>CYBER RISK MANAGEMENT<a id = 'info' style="font-size:25px; background-color: grey; text-decoration: none; color: white;" href = '#infobox'>?</a></h1>
     </div>
-    <div id="dayCounter"></div>
+    <div id="infobox">
+        <div class="content">
+            <h1 style="color: rgb(25, 0, 255)">
+                Instructions    
+            </h1>
+            <p>Welcome to the Cyber Risk Management Simulator</p>
+            <a
+                href="#"
+                style="
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                    color: #fe0606;
+                    font-size: 30px;
+                    text-decoration: none;
+                "
+                >&times;</a
+            >
+        </div>
+    </div>
+    <div id="dayCounter">DAY <br>
+        <a id="daynum" style="font-size: 90px;">1</a>
+    </div>
     <div id="company">
         <img src='company.png'> 
     </div>
     <div id="name">
-        <a onkeypress="return (this.innerText.length <= 20)" autocaptilize="true" contenteditable="true">
-            Company Name<a style="font-size: 50px;"> ✏️</a></a>
+        <a id="companyName" onkeypress="return (this.innerText.length <= 15); " autocaptilize="true" contenteditable="true">
+            Company Name</a>
     </div>
     <div id="event">
-        <p>asddddddddddddddddddddddddddddddddddddddddddddddssssssssss</p>
+        <h2>EVENT LOG</h2>
     </div>
-    <div id="moneydiv"><a>$0<a id="moneytext"></a></a></div>
+    <div id="moneydiv"><a>$<a id="moneytext">0</a></a>
+    </div>
     <div id="shop">
         <a>SHOP</a>
     </div>
