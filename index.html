@@ -8,16 +8,21 @@
     <link rel="stylesheet" href="style.css">
     <script src ='script.js'></script>
 </head>
-<body onload ="onLoad()">
+<body onload ="onLoad()" >
     <div id="head">
-        <h1>CYBER RISK MANAGEMENT<a id = 'info' style="font-size:25px; background-color: grey; text-decoration: none; color: white;" href = '#infobox'>?</a></h1>
+        <h1>CYBER RISK MANAGEMENT<a id = 'info' style="font-size:25px; background-color: grey; text-decoration: none; color: white;" href = '#instructions'>?</a></h1>
     </div>
-    <div id="infobox">
+    <div id="instructions" class ='infoBox'>
         <div class="content">
             <h1 style="color: rgb(25, 0, 255)">
                 Instructions    
             </h1>
-            <p>Welcome to the Cyber Risk Management Simulator</p>
+            <p>Welcome to the Cyber Risk Management Simulator <br>
+                Manage your company's risk against cyber attacks by buying upgrades.<br>
+                You lose or gain money every day that passes. <br>
+                Win by gaining $500,000<br>
+                Lose by going bankrupt.
+            </p>
             <a
                 href="#"
                 style="
@@ -42,13 +47,39 @@
         <a id="companyName" onkeypress="return (this.innerText.length <= 15); " autocaptilize="true" contenteditable="true">
             Company Name</a>
     </div>
+    <h2 href="#win">EVENT LOG</h2>
     <div id="event">
-        <h2>EVENT LOG</h2>
     </div>
-    <div id="moneydiv"><a>$<a id="moneytext">0</a></a>
+    <div id="moneydiv"><a>$<a id="moneytext">400000</a></a>
     </div>
     <div id="shop">
         <a>SHOP</a>
     </div>
+    <div id = "end" onclick="dayEvent()">
+        END DAY
+    </div>
+    <div id="win" class = 'infoBox'><div class="content">
+        <h1 style="color: rgb(25, 0, 255)">
+            Instructions    
+        </h1>
+        <p>Welcome to the Cyber Risk Management Simulator <br>
+            Manage your company's risk against cyber attacks by buying upgrades.<br>
+            You lose or gain money every day that passes. <br>
+            Win by gaining $500,000<br>
+            Lose by going bankrupt.
+        </p>
+        <a
+            href="#"
+            style="
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                color: #fe0606;
+                font-size: 30px;
+                text-decoration: none;
+            "
+            >&times;</a
+        >
+    </div></div>
 </body>
 </html>
