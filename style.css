@@ -38,6 +38,7 @@ h1 {
     display: none;
     align-items: center;
     justify-content: center;
+    z-index: 1;
 }
 
 .infoBox:target {
@@ -52,6 +53,33 @@ h1 {
 }
 .content > p {
     font-size: 30px;
+}
+#shopcontent {
+    width: 700px;
+    height: 700px;
+}
+#shopoptions {
+    display: grid;
+    gap: 8px;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: auto;
+    width:70%;
+    height:50%;
+}
+#shopoptions > div {
+    height: 5em;
+    padding-top: 40px;
+    border: 5px solid black;
+    color: white;
+    background-color: #07848d;
+    text-align: center;
+    font: small-caps 20px 'Lucida Console', sans-serif;
+}
+
+#shopoptions > div:hover {
+    background-color: #02b2be;
+    cursor: pointer;
 }
 #name {
     margin-top: 20px;
@@ -79,9 +107,6 @@ h1 {
     font:  small-caps 100px 'Lucida Console', sans-serif;
     padding: 5px;
     color: rgb(0, 255, 0);
-}
-#moneytext {
-    
 }
 #companyName:focus{
     box-shadow: 0 0 2px blue;

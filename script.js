@@ -32,12 +32,11 @@ function dayEvent() {
     const eventLog = document.getElementById('event')
     eventLog.prepend(eventText);
     checkWin();
-    
 }
 
 function checkWin() {
     if(parseInt(document.getElementById('moneytext').text) > 500000) {
         console.log('win')
-        document.getElementById('win').click();
+        document.getElementById('win').style.display = 'flex';
     }
 }
