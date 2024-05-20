@@ -61,7 +61,7 @@ h1 {
 #shopoptions {
     display: grid;
     gap: 8px;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     margin: auto;
     width:70%;
@@ -80,6 +80,10 @@ h1 {
 #shopoptions > div:hover {
     background-color: #02b2be;
     cursor: pointer;
+}
+
+#explanation {
+    overflow-wrap: break-word;
 }
 #name {
     margin-top: 20px;

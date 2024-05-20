@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RiskManagement</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src ='script.js'></script>
 </head>
 <body onload ="onLoad()" >
@@ -18,8 +19,9 @@
                 Instructions    
             </h1>
             <p>Welcome to the Cyber Risk Management Simulator <br>
-                Manage your company's risk against cyber attacks by buying upgrades.<br>
                 You lose or gain money every day that passes. <br>
+                Everyday, the risk of an attack will increase. <br>
+                Manage your company's risk against cyber attacks by buying upgrades.<br>
                 Win by gaining $500,000<br>
                 Lose by going bankrupt.
             </p>
@@ -39,6 +41,7 @@
     </div>
     <div id="dayCounter">DAY <br>
         <a id="daynum" style="font-size: 90px;">1</a>
+        Risk <br> <a id="risk">30</a>%
     </div>
     <div id="company">
         <img src='company.png'> 
@@ -61,15 +64,16 @@
                 Shop    
             </h1>
             <div id = 'shopoptions'>
-            <div>Security Training</div>
-            <div>Firewalls and Advanced Security Devices</div>
-            <div>Penetration Test</div>
-            <div>Malware Protection</div>
-            <div>UPGRADE</div>
-            <div>UPGRADE</div>
-            <div>UPGRADE</div>
-            <div>UPGRADE</div>
-            <div>UPGRADE</div>
+            <div id="1" class="upgrade">Security Training</div>
+            <div id="2" class="upgrade">Firewalls and Advanced Security Devices</div>
+            <div id="3" class="upgrade">Penetration Test</div>
+            <div id="4" class="upgrade">Malware Protection</div>
+            <div id="5" class="upgrade">UPGRADE</div>
+            <div id="6" class="upgrade">UPGRADE</div>
+            <div id="7" class="upgrade">UPGRADE</div>
+            <div id="8" class="upgrade">UPGRADE</div>
+            <div id="9" class="upgrade">UPGRADE</div>
+            <span id="explanation" style="grid-column: 1 / 4">explanationexplanationexplanationexplanationexplanationexplanationexplanationexplanationexplanation</span>
             </div>
             <a
                 href="#"
@@ -88,24 +92,21 @@
     <div id = "end" onclick="dayEvent()">
         END DAY
     </div>
-    <div id="win" class = 'infoBox'><div class="content">
+    <div id="win" class = 'infoBox'>
+        <div class="content">
         <h1 style="color: rgb(25, 0, 255)">
             WIN    
         </h1>
         <p>Congratulations! You Win.
         </p>
-        <a
-                href="#"
-                style="
-                    position: absolute;
-                    top: 10px;
-                    right: 10px;
-                    color: #fe0606;
-                    font-size: 30px;
-                    text-decoration: none;
-                "
-                >&times;</a
-            >
-    </div></div>
+        </div>
+    </div>
+    <div id="lose" class = 'infoBox'><div class="content">
+        <h1 style="color: rgb(25, 0, 255)">
+            LOSE    
+        </h1>
+        <p>WOMP WOMP You Lose.
+        </p>
+    </div>
 </body>
 </html>
