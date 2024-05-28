@@ -3,7 +3,7 @@ function onLoad() {
     document.getElementById('info').click();
 }
 
-var risk = 15;
+var risk = 30;
 var badEventText = [ 'Physical Attack', 'DDOS', 'Zero Day', 'Virus', 'Data Corruption', 'XSS', 'SQL Injection', 'Social Engineering', 'Spoofing' ];
 var goodEventText = ['Good Advertising', 'Success at Exhibition', 'Celebrity Shoutout', 'Successful Sponsor', 'Stock is mooning!'];
 var day = 1;
