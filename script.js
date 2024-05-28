@@ -3,13 +3,17 @@ function onLoad() {
     document.getElementById('info').click();
 }
 
-var risk = 30;
-var badEventText = ['Spoofing', 'Man-in-the-middle', 'XSS', 'SQL Injection', 'DDOS', 'Social Engineering', 'Zero Day', 'Phishing' ];
+var risk = 15;
+var badEventText = [ 'Physical Attack', 'DDOS', 'Zero Day', 'Virus', 'Data Corruption', 'XSS', 'SQL Injection', 'Social Engineering', 'Spoofing' ];
 var goodEventText = ['Good Advertising', 'Success at Exhibition', 'Celebrity Shoutout', 'Successful Sponsor', 'Stock is mooning!'];
 var day = 1;
+var boughtUpgrades =[];
 
 function dayEvent() {
-    risk+=2;
+    risk+=1;
+    if (risk > 80) {
+        risk = 80;
+    }
     day++;
     document.getElementById('risk').text = risk;
     document.getElementById('daynum').text = day;
@@ -19,7 +23,9 @@ function dayEvent() {
     var isGood = false;
     var event = null;
     if (chance <= risk) {
-        event = badEventText[Math.floor(Math.random()*badEventText.length)];
+        eventId = Math.floor(Math.random()*badEventText.length)
+        event = badEventText[eventId];
+        moneyChange = Math.floor(reduce(eventId, moneyChange));
         moneyChange*=-1;
         text += 'Attack: ' + event + ' ' + moneyChange;
     } else {
@@ -52,17 +58,37 @@ function checkWin() {
     }
 }
 
-const explanations = ['Train up your employees. Reduce SLE of Social Engineering attacks.']
+const explanations = ['Reduce SLE of Physical attacks.', 'Reduce SLE of DDOS attacks.', 'Reduce SLE of Zero Day attacks.', 'Reduce SLE of Virus attacks.', 'Reduce SLE of Data Corruption.', 'Reduce SLE of XSS attacks.', 'Reduce SLE of SQL Injection attacks.', 'Reduce SLE of Social Engineering attacks.', 'Reduce SLE of Spoofing attacks.']
 
 $(document).ready(function() {
 
 $('.upgrade').hover(
     function() {
-        console.log('hover')
         var explanation = document.getElementById('explanation');
-        console.log(this.id)
-        explanation.textContent = explanations[parseInt(this.id)-1];
+       
+        explanation.innerHTML = explanations[parseInt(this.id)] + ' <br>Cost: $30000';
     }, function() {
-        console.log('stop')
     })
-});
+},
+);
+
+function buy(div) {
+    money = parseInt(document.getElementById('moneytext').textContent)
+    if (money < 30000) {
+        document.getElementById('explanation').textContent = 'Not Enough Cash';
+    } else {
+        money -=30000
+        document.getElementById('moneytext').textContent = money;
+        div.style.display = 'none'
+        boughtUpgrades.push(parseInt(div.id))
+    }
+}
+
+function reduce(attackID, moneyChange) {
+    if (boughtUpgrades.includes(attackID)) {
+        moneyChange /= 50;
+    }
+    return moneyChange
+}
+
+
