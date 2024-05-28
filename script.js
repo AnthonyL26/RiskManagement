@@ -27,7 +27,7 @@ function dayEvent() {
         event = badEventText[eventId];
         moneyChange = Math.floor(reduce(eventId, moneyChange));
         moneyChange*=-1;
-        text += 'Attack: ' + event + ' ' + moneyChange;
+        text += 'Attack: ' + event + ' SLE: ' + moneyChange;
     } else {
         event = goodEventText[Math.floor(Math.random()*goodEventText.length)];
         text += 'Blessing: ' + event + ' +' + moneyChange;
