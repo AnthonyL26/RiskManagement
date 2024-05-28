@@ -8,7 +8,7 @@ var badEventText = [ 'Physical Attack', 'DDOS', 'Zero Day', 'Virus', 'Data Corru
 var goodEventText = ['Good Advertising', 'Success at Exhibition', 'Celebrity Shoutout', 'Successful Sponsor', 'Stock is mooning!'];
 var day = 1;
 var boughtUpgrades =[];
-
+// 
 function dayEvent() {
     risk+=1;
     if (risk > 80) {
